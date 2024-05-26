@@ -1,0 +1,13 @@
+# Postman Assertions
+
+pm.test("Status test", function (){
+    pm.response.to.have.status(200);
+});
+
+pm.test('Response latency is acceptable', () =>
+pm.expect(pm.response.responseTime).to.be.lte(2000))
+
+pm.test("server header", function (){
+    pm.response.to.have.header(/cloudflare/)
+    
+)};
